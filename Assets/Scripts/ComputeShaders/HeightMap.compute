@@ -72,7 +72,7 @@ float snoise(float2 v)
     float2 x2 = x0 + C.zz;
 
     // Permutations
-    i = mod289(i); // Avoid truncation effects in permutation
+    i = i;//mod289(i); // Avoid truncation effects in permutation
     float3 p =
       permute(permute(i.y + float3(0.0, i1.y, 1.0))
                     + i.x + float3(0.0, i1.x, 1.0));
